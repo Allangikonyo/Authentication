@@ -94,6 +94,35 @@ class Credentials:
         '''
         Credentials.accounts.remove(self)
 
+    @classmethod
+    def display_accounts(cls):
+        '''
+        class method that returns all user accounts stored in class list 
+        '''
+        return cls.accounts
+
+    @classmethod
+    def find_by_number(cls, number):
+
+        '''
+        a class method that finds the user account based on their number
+        '''
+
+        for account in cls.accounts:
+            if account.accountusername == number:
+                return account
+
+    @classmethod
+    def account_exist(cls, number):
+
+        '''
+        a class method that tests whether the account exists 
+        '''
+        for account in cls.accounts:
+            if account.accountusername == number:
+                return True 
+            else:
+                return False
 
  
 
