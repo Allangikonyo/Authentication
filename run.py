@@ -88,22 +88,55 @@ def main():
 
        option = input()
        if option == "CA":
-        print ("Create Account")
-        print ("-"*10)
-        print ("Enter your First Name..")
-        firstname = input()
-        print ("Enter your Last Name")
-        lastname = input()
-        print ("Set your Username")
-        username = input()
-        print ("Set your password..")
-        userpassword = input()
-        save_user(create_user(firstname, lastname, username, userpassword)) # create new user
-        print("Your account was created succesfully. Here are your account details")
-        print("-"*10)
-        print(f"Name: {firstname} {lastname} \nUsername: {username} \nPassword: {userpassword}" )
-        print("\nUse Login to your account with your details")
-        print(" \n \n")
+         print ("Create Account")
+         print ("-"*10)
+         print ("Enter your First Name..")
+         firstname = input()
+         print ("Enter your Last Name")
+         lastname = input()
+         print ("Set your Username")
+         username = input()
+         print ("Set your password..")
+         userpassword = input()
+         save_user(create_user(firstname, lastname, username, userpassword)) # create new user
+         print("Your account was created succesfully. Here are your account details")
+         print("-"*10)
+         print(f"Name: {firstname} {lastname} \nUsername: {username} \nPassword: {userpassword}" )
+         print("\nUse Login to your account with your details")
+         print(" \n \n")
+
+       elif option == "LG":
+         print(" your username..")
+         loginUsername = input()
+         print ("your Password..")
+         loginPassword=input ()
+         if find_user(loginPassword):
+            print("/n")
+            print ("your can create multiple accounts (MC) and also view them (VC)")
+            print ("-"*60)
+            print("MC -or- VC")
+            choose= input ()
+            print ("/n")
+            if choose == "MC":
+                print("Add Your Account")
+                print ("-" *25)
+                accountusername = loginUsername
+                print("Account Name")
+                accountname= input()
+                print("\n")
+                print("Generate automatic password (A) or Create new password(C)?")
+                decision = input()
+                if decision == "A":
+                    characters=string.ascli_letters + string.digits
+                    accountpassword= "" .join(choice(characters)for x in range(randint(6,16)))
+                    print("Password: {accountpassword}")
+                elif decision == "C":
+                    print("Enter your Password")
+                    accountpassword= input()
+                else:
+                       print("please enter a valid password")
+
+
 
 
  
