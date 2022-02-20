@@ -5,13 +5,24 @@
 ## Description
 The following code represents an application, built solely on Python, that will help manage your passwords and even generate new passwords for you if needed.
 
-The following is the demo user interface of the landing page. 
-
-![Delani Studio](./img/Delani-Studio-reference.jpeg)
 
 ## Setup/Installation Requirements
 
-To run the password manager, an installation of python 3.9 is required. 
+Clone this repository and navigate to the folder. Run the following commands to change file permisiions:-
+
+chmod +x run.py To run the program run the following command:-
+./run.py
+
+## Dependencies 
+
+pyperclip
+python 3.9.1
+
+## User Stories 
+
+A user can create an account by providing name and password
+A user can generate passwords for various accounts
+The program should be able to store existing credentials
 
 ## Known Bugs
 None. 
