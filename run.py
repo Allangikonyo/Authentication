@@ -78,6 +78,36 @@ def display_accounts():
     return Credentials.display_accounts()
 
 
+def main():
+    '''
+    creating main function
+    '''
+    while True:
+       print ("Welcome to Password Manager: Use these short codes to start - CA: create account OR LG :login to begin")
+       print ("CA -or- LG ")
+
+       option = input()
+       if option == "CA":
+        print ("Create Account")
+        print ("-"*10)
+        print ("Enter your First Name..")
+        firstname = input()
+        print ("Enter your Last Name")
+        lastname = input()
+        print ("Set your Username")
+        username = input()
+        print ("Set your password..")
+        userpassword = input()
+        save_user(create_user(firstname, lastname, username, userpassword)) # create new user
+        print("Your account was created succesfully. Here are your account details")
+        print("-"*10)
+        print(f"Name: {firstname} {lastname} \nUsername: {username} \nPassword: {userpassword}" )
+        print("\nUse Login to your account with your details")
+        print(" \n \n")
+
+
+ 
+
 
  
 
