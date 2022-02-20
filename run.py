@@ -39,12 +39,43 @@ def find_user(number):
  
 def display_users(number):
     ''''
-    function taht returns all the saved users
+    function that returns all the saved users
     '''
     return User.display_users()
  
-# creating user functions that implements the behaviour created in user.py
+# creating account functions that implements the behaviour created in user.py
 
+def create_account(accountusername, accountname, accountpassword):
+
+    '''
+     function to create a new account
+     '''
+    newaccount = Credentials(accountusername, accountname, accountpassword)
+    return newaccount
+ 
+def save_account(user):
+    ''''
+    function to save user account info, calls save account method
+    '''
+    user.save_account()
+ 
+def delete_account(user):
+    '''
+    function to delete user account info, calls delete account method
+    '''
+    user.delete_account()
+ 
+def find_account(number):
+    ''''
+    function to find user account that takes in a number and calls the credentials class method
+    '''
+    return Credentials.find_by_number(number)
+ 
+def display_accounts():
+    ''''
+    function that returns all the saved accounts 
+    '''
+    return Credentials.display_accounts()
 
 
 
