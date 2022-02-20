@@ -21,7 +21,6 @@ class User:
         '''
         create method to add user info into our userlist 
         '''
-
         User.userlist.append(self) 
 
     def delete_user(self):
