@@ -8,7 +8,7 @@ from random import *
 from user import User 
 from user import Credentials 
 
-# creating functions that implement the behaviour created 
+# creating user functions that implements the behaviour created in user.py
 
 def create_user(firstname, lastname, username, userpassword):
 
@@ -30,6 +30,22 @@ def delete_user(user):
     function to delete user info, calls delete user method
     '''
     user.delete_user()
+
+def find_user(number):
+    ''''
+    function to find user that takes in a number and calls the User class method
+    '''
+    return User.find_by_number(number)
+ 
+def display_users(number):
+    ''''
+    function taht returns all the saved users
+    '''
+    return User.display_users()
+ 
+# creating user functions that implements the behaviour created in user.py
+
+
 
 
  
