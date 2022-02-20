@@ -110,6 +110,7 @@ def main():
          loginUsername = input()
          print ("your Password..")
          loginPassword=input ()
+
          if find_user(loginPassword):
             print("/n")
             print ("your can create multiple accounts (MC) and also view them (VC)")
@@ -135,6 +136,36 @@ def main():
                     accountpassword= input()
                 else:
                        print("please enter a valid password")
+
+                save_account(create_account(accountusername, accountname, accountpassword))
+                print("\n")
+                print(f"Username: {accountusername} \nAccount Name: {accountname} \nPassword: {accountpassword}")
+
+            elif choose == "VC":
+                if find_account(accountusername):
+                     print("Here is a list of yout created accounts: ")
+                     print("-"*25)
+                     for user in display_accounts():
+                         print (f"Account: {user.accountname} \nPassword: {user.accountpassword} \n\n")
+ 
+                else:
+                     print("Invalid credentials")
+ 
+            else:
+                 print("Please try again")
+                 print("/n")
+ 
+         else:
+               print("Invalid username or password please try again!")
+               print("\n")
+      
+       else:
+        print("Kindly choose a valid option")
+        print("\n")
+ 
+if __name__ == "__main__":
+   main()
+
 
 
 
