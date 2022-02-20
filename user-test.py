@@ -38,6 +38,7 @@ def test_delete_user(self):
  
     self.new_contact.save_contact()
     test_user = user("Test", "user", "0727901911", "test@user.com")
+    
     test_user.save_user()
  
     self.new_user.delete_user()
