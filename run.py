@@ -4,9 +4,9 @@
 # implementing the class in run.py 
 # imported user and credentials class 
 import string 
-from random import *
 from user import User 
 from user import Credentials 
+from random import *
 
 # creating user functions that implements the behaviour created in user.py
 
